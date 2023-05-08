@@ -1,12 +1,12 @@
 
 
 const getDataSponsors = async() => {
-    const data = await fetch("https://datajsonact.glitch.me/sponsors.json")
+    const data = await fetch("https://datajsonact.glitch.me/sponsors.json") //on récupère le json avec fetch
     const json = await data.json()
-    console.log("Sponsors", json)
-    const sponsorsContainer = document.querySelector("#sponsors-container");
-    json.data.forEach((sponsors) =>{
-        sponsorsContainer.innerHTML +=
+    console.log("Sponsors", json) // on vérifie qu'il marche
+    const sponsorsContainer = document.querySelector("#sponsors-container"); //on récupère l'id de l'html
+    json.data.forEach((sponsors) =>{ //on parcout le fichier json
+        sponsorsContainer.innerHTML += //on affiche dans l'html
         `
         <div class="border border-[#008F11] rounded-xl group">
             <h2 class="text-2xl lg:text-5xl text-center text-[#008F11] mt-2 group-hover:text-[#00FF41]" style="font-family: 'Rum Raisin', cursive;">${sponsors.nom} nous soutient !</h2>
@@ -19,4 +19,4 @@ const getDataSponsors = async() => {
     })
   }
 
-  getDataSponsors();
+  getDataSponsors(); //on appelle la fonction pour l'utiliser

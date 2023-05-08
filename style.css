@@ -1,3 +1,4 @@
+/* nippo sur tous le body */
 body {
     font-family: 'Nippo';
 }
@@ -10,6 +11,7 @@ body {
     animation: text-scroll 100s linear infinite;
 }
 
+/* pour animer un texte en scroll lateral vers la gauche */
 @keyframes text-scroll {
     0% {
         transform: translate(0)
@@ -20,6 +22,7 @@ body {
     }
 }
 
+/* pour animer une image en la faisant tourner sur elle même */
 @keyframes spin {
     to {
         transform: rotate(1turn)
@@ -36,6 +39,7 @@ body {
     animation: image-scroll 40s linear infinite;
 }
 
+/* pour animer une image en scroll lateral vers la gauche */
 @keyframes image-scroll {
     0% {
         transform: translate(0);
