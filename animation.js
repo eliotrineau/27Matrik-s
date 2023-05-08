@@ -20,14 +20,12 @@ btn27M.addEventListener('click',()=>{
   scrollTxtPoles.scrollIntoView({
     behavior:'smooth'
   });
-  Window.scrollBy(0, -30);
 });
 
 btnBDE.addEventListener('click',()=>{
   scrollPoles.scrollIntoView({
     behavior:'smooth'
   });
-  Window.scrollBy(0, -30);
   
 });
 
@@ -36,14 +34,10 @@ btnEvent.addEventListener('click',()=>{
   scrollEvent.scrollIntoView({
     behavior:'smooth'
   });
-  Window.scrollBy(0, -100);
-  
 });
 
 btnConcours.addEventListener('click',()=>{
   scrollConcours.scrollIntoView({
     behavior:'smooth'
-  });
-  Window.scrollBy(0, -30);
-  
+  });  
 });
