@@ -7,7 +7,7 @@ const getDataAct = async() => {
       actContainer.innerHTML += //on affiche dans l'html
       `
       <div class="flex justify-center h-[420px] w-[280px]  bg-zinc-500 rounded-xl border border-[#008F11] mx-auto mx-auto group overflow-hidden">
-          <a target="_blank" href="https://photos.app.goo.gl/nDLyuRYyAGgQ5jFL7">
+          <a target="_blank" href="${activite.lien}">
               <img class="w-full h-full transition duration-300 ease-in-out object-cover " src="${activite.img}">
               <a class="absolute self-end mb-12 text-center drop-shadow-2xl">${activite.intitule}</a>
               <p class="absolute text-xl self-end mb-2 text-center drop-shadow-2xl">${activite.date}</p>
