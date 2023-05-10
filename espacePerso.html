@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rum+Raisin&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="ASSETS/SVG/logo.svg">                
     <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="AfficherPerso.js"></script>
+    <script src="./AfficherPerso.js" defer="true" type="module"></script>
     <title>27 Matrik's</title>
 </head>
 <body class="bg-[#0D0208]">
@@ -53,7 +53,15 @@
             <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoCon" placeholder="Votre pseudo ici !"></textarea>
             <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpCon" placeholder="Votre mot de passe  ici !"></textarea>
         </div>  
+
+        <div class="border border-[#008F11] rounded-xl p-12 m-12 flex justify-around">
+            <a id="btnSupprimer" class="text-[#008F11] text-5xl hover:text-[#00FF41]">Supprimer son compte :</a>
+            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoSup" placeholder="Votre pseudo ici !"></textarea>
+            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpSup" placeholder="Votre mot de passe  ici !"></textarea>
+        </div>  
+
         <div id="utilisateur-container" class="text-[#008F11] flex justify-center"></div>
+        <div id="utilisateursHTML" class="text-[#008F11] flex justify-center"></div>
     </section>
 
     <div id="user-container"></div>
