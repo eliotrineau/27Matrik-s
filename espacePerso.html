@@ -41,23 +41,38 @@
 
     <h1 class="flex justify-center text-[#008F11] text-9xl">BETA ACCES</h1>
     <section id="Utillisateur-container">
-        <div class="border border-[#008F11] rounded-xl p-12 m-12 flex justify-around">
-            <a id="btnInscription" class="text-[#008F11] text-5xl hover:text-[#00FF41]">Inscription :</a>
-            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoIns" placeholder="Votre pseudo ici !"></textarea>
-            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="emailIns" placeholder="Votre email ici !"></textarea>
-            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpIns" placeholder="Votre mot de passe  ici !"></textarea>
+        <div class="border border-[#008F11] rounded-xl p-12 m-12">
+            <div class="flex justify-around items-center">
+                <a id="btnInscription" class="text-[#008F11] text-5xl hover:text-[#00FF41]">Inscription :</a>
+                <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoIns" placeholder="Votre pseudo ici !"></textarea>
+                <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="emailIns" placeholder="Votre email ici !"></textarea>
+                <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpIns" placeholder="Votre mot de passe  ici !"></textarea>
+            </div>
+            <div class="flex justify-center mt-6">
+                <div id="texteHTMLIns"></div>
+            </div>
         </div>        
 
-        <div class="border border-[#008F11] rounded-xl p-12 m-12 flex justify-around">
-            <a id="btnConnexion" class="text-[#008F11] text-5xl hover:text-[#00FF41]">Connexion :</a>
-            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoCon" placeholder="Votre pseudo ici !"></textarea>
-            <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpCon" placeholder="Votre mot de passe  ici !"></textarea>
+        <div class="border border-[#008F11] rounded-xl p-12 m-12 ">
+            <div class="flex justify-around items-center">
+                <a id="btnConnexion" class="text-[#008F11] text-5xl hover:text-[#00FF41]">Connexion :</a>
+                <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoCon" placeholder="Votre pseudo ici !"></textarea>
+                <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpCon" placeholder="Votre mot de passe  ici !"></textarea>
+            </div>
+            <div class="flex justify-center mt-6">
+                <div id="texteHTMLCon"></div>
+            </div>
         </div>  
 
-        <div class="border border-[#008F11] rounded-xl p-12 m-12 flex justify-around">
+        <div class="border border-[#008F11] rounded-xl p-12 m-12">
+            <div class="flex justify-around items-center">
             <a id="btnSupprimer" class="text-[#008F11] text-5xl hover:text-[#00FF41]">Supprimer son compte :</a>
             <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoSup" placeholder="Votre pseudo ici !"></textarea>
             <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpSup" placeholder="Votre mot de passe  ici !"></textarea>
+            </div>
+            <div class="flex justify-center mt-6">
+            <div id="texteHTMLSup"></div>
+            </div>
         </div>  
 
         <div id="utilisateur-container" class="text-[#008F11] flex justify-center"></div>
@@ -65,6 +80,9 @@
     </section>
 
     <div id="user-container"></div>
+
+    <div id="btnFaireGagner" class="text-5xl text-red-500">Bouton</div>
+    <div id="gagnantHTML" class="text-5xl text-red-500"></div>
 
         <!-- partie de fin du site et pour me contacter -->
         <section id="footer" class="mt-4 flex-col">
