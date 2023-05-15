@@ -271,3 +271,5 @@ btnSupprimer.addEventListener("click", EcouterSupprimer);
 
 const btnFaireGagner = document.querySelector("#btnFaireGagner");
 btnFaireGagner.addEventListener("click", faireGagner);
+
+
