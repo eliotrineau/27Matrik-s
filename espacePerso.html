@@ -59,8 +59,9 @@
                 <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="pseudoCon" placeholder="Votre pseudo ici !"></textarea>
                 <textarea class="border border-[#008F11] text-xl text-[#008F11] rounded-xl bg-[#0D0208] py-2 px-4" id="mdpCon" placeholder="Votre mot de passe  ici !"></textarea>
             </div>
-            <div class="flex justify-center mt-6">
-                <div id="texteHTMLCon"></div>
+            <div class="flex-col justify-center mt-6">
+                <div id="texteHTMLCon" class="flex justify-center mb-4"></div>
+                <div id="utilisateur-container" class="text-[#008F11] flex justify-center"></div>
             </div>
         </div>  
 
@@ -75,14 +76,22 @@
             </div>
         </div>  
 
-        <div id="utilisateur-container" class="text-[#008F11] flex justify-center"></div>
         <div id="utilisateursHTML" class="text-[#008F11] flex justify-center"></div>
+
+        <div class="border border-[#008F11] rounded-xl p-12 m-12">
+            <div class="flex justify-center">
+                <div class="flex-col">
+                    <div id="btnFaireGagner" class="mb-6 text-5xl text-red-500">Tirer au sort un gagnant :</div>
+                    <div id="gagnantHTML" class="text-5xl text-red-500"></div>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
-    <div id="user-container"></div>
-
-    <div id="btnFaireGagner" class="text-5xl text-red-500">Bouton</div>
-    <div id="gagnantHTML" class="text-5xl text-red-500"></div>
+    
+    
+    
 
         <!-- partie de fin du site et pour me contacter -->
         <section id="footer" class="mt-4 flex-col">

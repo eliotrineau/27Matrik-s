@@ -139,9 +139,11 @@ const Connexion = async (pseudo, motdepasse) => {
         afficherUtilisateur.innerHTML =""  //affiche le hmtl
         afficherUtilisateur.innerHTML +=  //affiche le hmtl
         `
-        <div class="flex-col border border-[#008F11]] text-[#008F11] text-xl">
+        <div class="flex-col border rounded-xl border-[#008F11] py-1 px-2 text-[#008F11] text-xl">
+          <p>Données du compte :</p>
           <p>${utilisateur.pseudo}</p>
           <p>${utilisateur.email}</p>
+          <p>${utilisateur.motdepasse}</p>
         </div>
         `;
       }
@@ -208,35 +210,33 @@ const supprimerUtilisateur = async (pseudo, motdepasse) => {
   }
 };
 
-/*
 const faireGagner = async () => {
   const gagnantHTML = document.querySelector("#gagnantHTML"); // lie le code à l'html avec l'id
-  const Collection = collection(db, "Utilisateurs"); // récupère la collection Utilisateurs
   try {
-    const snapshot = await getDocs(Collection);
-    const nbDoc = snapshot.size; // nombre de documents
-    const nbAleatoire = Math.floor(Math.random() * nbDoc); // génère un nombre aléatoire
-    const querySnapshot = await Collection.limit(1).offset(nbAleatoire).get(); // spécifie l'offset et limite à un seul résultat
-    querySnapshot.forEach((doc) => { // affiche l'html
-      const gagnant = doc.data().pseudo;
-      gagnantHTML.innerHTML =""
-      gagnantHTML.innerHTML += `
-        <div class="justify-center">
-          <p class="text-[#008F11] text-xl">Le gagnant est : ${gagnant}!</p>
+    const nbDoc = await getDocument("Utilisateurs"); // récupère la collection Utilisateurs
+    const utilisateurAleatoire = Math.floor(Math.random() * nbDoc.length); //récupère la taille de la collection 
+    const utilisateurAAfficher = nbDoc[utilisateurAleatoire]; // assigne le nombre aléatoire 
+    gagnantHTML.innerHTML = "";
+    gagnantHTML.innerHTML += 
+    gagnantHTML.innerHTML = // Affiche le html du 4ème document uniquement
+      `
+      <div class="flex justify-center">
+        <div>
+          <p class="text-[#008F11] text-xl">Gagnant(e) : ${utilisateurAAfficher.pseudo} !</p> 
+          <p class="text-[#008F11] text-xl">Email : ${utilisateurAAfficher.email}</p> 
         </div>
-      `;
-    });
-  } catch (error) {
-    gagnantHTML.innerHTML =""
-    gagnantHTML.innerHTML += `
-      <div class="justify-center">
-        <p class="text-[#008F11] text-xl">Un problème est survenu !</p>
       </div>
+      `;
+  } catch (error) { // en cas d'erreur alors il affiche cela :
+    gagnantHTML.innerHTML = "";
+    gagnantHTML.innerHTML += 
+    `
+    <div class="justify-center">
+      <p class="text-[#008F11] text-xl">Un problème est survenu !</p>
+    </div>
     `;
   }
-};
-*/
-
+}
 
 const EcouterInscription = async (event) => {
   event.preventDefault(); // permet d'éviter de recharger la page en continu
@@ -267,5 +267,7 @@ const btnConnexion = document.querySelector("#btnConnexion")
 btnConnexion.addEventListener("click", EcouterConnexion);
 const btnSupprimer = document.querySelector("#btnSupprimer");
 btnSupprimer.addEventListener("click", EcouterSupprimer);
+
+
 const btnFaireGagner = document.querySelector("#btnFaireGagner");
 btnFaireGagner.addEventListener("click", faireGagner);
