@@ -27,7 +27,7 @@ const getDocument = async (collectionName) => {
 }
 
 const afficherConcours = async () => {
-  const sponsors = await getDocument("Sponsors");
+  const sponsors = await getDocument("Sponsors"); // on récupère les données Firebase
   const sponsorsContainer = document.querySelector("#sponsors-container"); //on récupère l'id de l'html
   sponsors.forEach((sponsors)=>{
     sponsorsContainer.innerHTML += //affiche le html
